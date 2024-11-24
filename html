@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Isochrone Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <style>
+    #map { height: 80vh; }
+    .controls { margin: 10px; }
+  </style>
+</head>
+<body>
+  <h1>Isochrone Map</h1>
+  <div class="controls">
+    <input type="text" id="address" placeholder="Enter an address">
+    <select id="transportation-mode">
+      <option value="foot-walking">Walking</option>
+      <option value="cycling-regular">Cycling</option>
+      <option value="driving-car">Driving</option>
+    </select>
+    <input type="number" id="time-frame" placeholder="Time (minutes)" min="1" max="120" value="15">
+    <button id="submit">Find Reachable Area</button>
+  </div>
+  <p>Or click on the map to set a starting point.</p>
+  <div id="map"></div>
+  
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
